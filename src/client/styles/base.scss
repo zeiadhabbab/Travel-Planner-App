@@ -1,0 +1,239 @@
+$fontfamily: "Actor";
+// Override Bootstrap's Sass default variables
+
+// Include functions first
+@import "bootstrap/scss/functions";
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #fff;
+$border-radius: .4rem;
+$success: #7952b3;
+
+// Required
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+ @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+// @import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: $fontfamily;
+}
+
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+
+.page{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+  
+.mobile-phone {
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px 10px 30px;
+    width: 390px;
+    height: 700px;
+    box-shadow: 0 0 20px #e2e2e2;
+    border-radius: 30px;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    border-radius: 30px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.brove {
+    width: 150px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    margin: 0 100px;
+    border-radius: 0 0 20px 20px;
+    z-index: 100;
+}
+
+.speaker {
+    width: 60px;
+    height: 5px;
+    background: #d2d2d2;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+.app-header {
+    position: absolute;
+    background: #28d3fb;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.app-content{
+    position: absolute;
+    top:45px;
+    height: calc(100% - 45px - 86px);
+    background:#d4f7ff;
+    padding: 15px;
+
+}
+
+.notification-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+
+div#search-from {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+    input{
+        margin-bottom: 5px;
+    }
+
+
+    h4 {
+        color: #008aab;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+}
+
+
+.app-footer {
+    position: absolute;
+    background: #28d3fb;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 17px;
+
+    div{
+        width: 25%;
+    }
+
+    a{
+        width: 100%;
+        border: 0px;
+        height: 50px;
+        background: transparent;
+        border-left: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        color: #121212;
+        text-decoration: none;
+
+        &:hover{
+            color: #333;
+        }
+
+        i {
+            font-size: 20px;  
+        }
+
+        svg {
+            width: 38px !important;
+            height: 20px !important;
+        }
+
+    }
+}
+
+div#search-result-loader {
+    text-align: center;
+    font-size: 36px;
+    color: #197e9a;
+    display: none;
+}
+
+.show-loader{
+    display: block !important;
+}
+
+.hide-loader{
+    display: none !important;
+}
