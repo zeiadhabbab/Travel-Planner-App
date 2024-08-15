@@ -36,7 +36,7 @@ To run Server side on dev environment:
 ```
 npm run start 
 ```
-this will run serve on port 8000 
+this will run serve on port 8888 
 
 To run client side use:
 ```
