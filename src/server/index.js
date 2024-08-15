@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(express.static('dist'))
 dotenv.config();
 
-isDummy = true;
+isDummy = false;
 
 
 
