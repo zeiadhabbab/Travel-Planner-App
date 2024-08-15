@@ -1,5 +1,5 @@
 {
-  "name": "nlp-project",
+  "name": "trip-project",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build-dev": "webpack-dev-server --config webpack.dev.js --open"
   },
   "keywords": [
-    "nlp-project",
+    "trip-project",
     "meaningcloud",
     "udacity"
   ],

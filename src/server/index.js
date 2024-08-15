@@ -17,8 +17,6 @@ dotenv.config();
 
 isDummy = false;
 
-
-
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 });
@@ -42,7 +40,9 @@ const pixabayKey = process.env.PIXABAY_KEY;
 const countriesAPI = process.env.COUNTRIES_API;
 const countriesKey = process.env.COUNTRIES_KEY;
 
-
+app.get('/', function (req, res) {
+    res.sendFile('dist/index.html')
+});
 
 // POST Route for getFromGeonamesAPI
 app.post("/getFromGeonamesAPI", async (req, res) => {
