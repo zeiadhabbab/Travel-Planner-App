@@ -74,8 +74,8 @@ COUNTRIES_KEY = '?access_key=a187********************'
 ## Deploying
 
 I already deployed the project to this url
-[https://evaluate-news-nlp-one.vercel.app/](https://travel-planner-app-kappa.vercel.app/)
 
+[https://travel-planner-app-kappa.vercel.app/](https://travel-planner-app-kappa.vercel.app/)
 
 ## Get in touch with me
 
