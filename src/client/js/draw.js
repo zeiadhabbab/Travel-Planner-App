@@ -55,7 +55,8 @@ export function drwaResultUI(cardData){
     const html = `
     <div class="card">
         <div class="card-title">
-            <div>${cardData.destination}, ${cardData.countryName}</div>
+            <div>${cardData.destination}, ${cardData.countryName} <img src="https://cdn.weatherbit.io/static/img/icons/${cardData.weatherDataByDate[0].weather.icon}.png" 
+                        style="width: 33px; height: 30px;object-fit: scale-down; margin: 0; padding: 0;"></div>
             <div>
                 <a href="#" id="save-btn" class="save-btn" title="Save to Trip" data-id="${cardData.geonameId}"><i class="far fa-bookmark"></i> Save</a>
             </div>
@@ -208,7 +209,8 @@ export function addDataToCards(type, cardData = null){
                 form = form + `
                     <div class="info weather">
                         <div><strong>Weather Forecast on: ${item.valid_date}</strong></div>
-                        <div>${item.weather.description}</div>
+                        <div>${item.weather.description} <img src="https://cdn.weatherbit.io/static/img/icons/${item.weather.icon}.png" 
+                        style="width: 33px; height: 30px;object-fit: scale-down; margin: 0; padding: 0;"></div>
                         <div><strong>Min Temp:</strong> ${item.min_temp}</div>
                         <div><strong>Max Temp:</strong> ${item.max_temp}</div>
                         <div><strong>Current Temp:</strong> ${item.temp}</div>
@@ -317,7 +319,9 @@ export function drawSavedUI(){
             html = html + `
             <div class="card">
                 <div class="card-title">
-                    <div>${cardData.destination}, ${cardData.countryName}</div>
+                    <div>${cardData.destination}, ${cardData.countryName} 
+                    <img src="https://cdn.weatherbit.io/static/img/icons/${cardData.weatherDataByDate[0].weather.icon}.png" 
+                        style="width: 33px; height: 30px;object-fit: scale-down; margin: 0; padding: 0;"></div>
                      <div>
                         <a href="#" id="remove-btn-${cardData.geonameId}" class="remove-btn save-btn" title="Remove the Trip" data-id="${cardData.geonameId}">
                             <i class="far fa fa-trash"></i> Remove

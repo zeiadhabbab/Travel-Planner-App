@@ -61,16 +61,8 @@ export function getTempData(){
 
 
 /*
-Add uniqe locatiin
-delete location
-fixed clik on save 
-c=hnage button of save
-
 
 Allow user to add multiple destinations on the same trip.
-Pull in weather for additional locations.
-
-Instead of just pulling a single day forecast, pull the forecast for multiple days.
 
 
 Incorporate icons into forecast.
