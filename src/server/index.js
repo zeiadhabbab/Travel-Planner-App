@@ -4,7 +4,7 @@ const { pixiData } = require("./dummy");
 
 const path = require('path');
 const express = require('express');
-const port = 8000;
+const port = 8888;
 const cors = require("cors");
 const app = express();
 const dotenv = require('dotenv');

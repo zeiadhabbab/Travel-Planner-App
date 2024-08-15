@@ -107,7 +107,7 @@ async function getData(url, body){
 
     try {
         // Function to send data to the server
-        const response = await fetch(`http://localhost:8000/${url}`, {
+        const response = await fetch(`http://localhost:8888/${url}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
