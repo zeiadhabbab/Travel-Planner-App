@@ -8,20 +8,20 @@ The goal of this project is to practice with:
 - Sass styles
 - Webpack Loaders and Plugins
 - Creating layouts and page design
-- Using APIs and creating requests to external urls
+- Using APIs and creating requests to external URLs
 
-The Application featurs
+The Application features
 - Search for city and return city data
 - Get Weather Forecast for arrived date
 - Get Destination images and make it as slider.
 - Get all trip Weather Forecast
-- Show curren Weather icon
-- Calcuate Duration time
-- Calcuate Days Left to the trip
-- Save trip to Saved tab (Local stroge)
-- Add more information about trip like: Flight,Lodging,List,Notes
+- Show current Weather icon
+- Calculate Duration time
+- Calculate Days Left to the trip
+- Save trip to Saved tab (Local storge)
+- Add more information about trip like: Flight ,Lodging ,List ,Notes
 - Update data trip by save find it by geonameId
-- Remove trip from the (Local stroge)
+- Remove trip from the (Local storge)
 
 ## Getting started
 ```
@@ -42,7 +42,7 @@ To run client side use:
 ```
 npm run build-dev  
 ```
-you can now check this url to access the project
+you can now check this URL to access the project
 ```
 http://localhost:3000/
 ```
@@ -66,9 +66,6 @@ GEONAMES_KEY = '&maxRows=10&username=zei**********b'
 PIXABAY_URL = 'https://pixabay.com/api/?&image_type=photo&q='
 PIXABAY_KEY = '&key=33701545-f6503********************'
 
-# API URL for countrylayer
-COUNTRIES_API = 'https://api.countrylayer.com/v2/name/'
-COUNTRIES_KEY = '?access_key=a187********************'
 ```
 
 ## Deploying
