@@ -3,16 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Evaluate A News Article with Natural Language Processing</title>
+    <title>Travel Planner Application</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta name="title" content="Evaluate A News Article with Natural Language Processing">
-    <meta name="description" content="Article Analyzer is a web tool that allows users to run Natural Language Processing (NLP) on articles by url. Using an API called meaning cloud">
-    <meta name="keywords" content="NLP,meaning cloud,udacity,node,express">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="title" content="Travel Planner Application">
+    <meta name="description" content="Travel Planner Application is a web tool that allows users to Plan Travel.">
+    <meta name="keywords" content="API, Weathr, Travel,meaning cloud,udacity,node,express">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
@@ -36,7 +37,7 @@
 </head>
 
 <body>
-    <div class='mobile-phone'>
+    <div class='mobile-phone' id="mobile-app">
         <div class='brove'>
             <span class='speaker'></span>
         </div>
@@ -78,6 +79,7 @@
                     <div id="search-result">
                         <div id="search-result-data">
 
+
                         </div>
                         <div id="search-result-loader">
                             <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
@@ -96,13 +98,15 @@
                     <a href="#saved" id="to-saved"><i class="fa-solid fa-bookmark"></i>Saved</a>
                 </div>
                 <div class="github">
-                    <a href="#" target="_blank"><i class="fab fa-github fa-fw"></i>Sourc</a>
+                    <a href="https://github.com/zeiadhabbab/Travel-Planner-App" target="_blank"><i class="fab fa-github fa-fw"></i>Sourc</a>
                 </div>
                 <div class="about">
-                    <a href="#" target="_blank"><i class="fa-solid fa-external-link"></i>About</a>
+                    <a href="https://zeyadmh.com/" target="_blank"><i class="fa-solid fa-external-link"></i>About</a>
                 </div>
            </div>
- 
+           <div id="popup-holder">
+
+           </div>
         </div>
     </div>
     

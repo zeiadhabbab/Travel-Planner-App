@@ -1,9 +1,10 @@
 // js files
-import { handleSubmit } from './js/app'
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+import { handleSubmit } from './js/app';
+import { drawSavedUI } from './js/draw';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 import Scrollbar from 'smooth-scrollbar';
 
 // sass files
@@ -33,6 +34,7 @@ search.addEventListener("click", (event) => {
 saved.addEventListener("click", (event) => {
     event.preventDefault();
     goTo('saved-view');
+    drawSavedUI();
 });
 
 

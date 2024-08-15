@@ -66,6 +66,7 @@ input#button-search {
 .card .info {
   padding: 4px;
   font-size: 14px;
+  width: 50%;
 }
 .card .info .weather {
   border-left: 1px solid #ccc;

@@ -24,6 +24,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.17.1",
     "node-fetch": "^3.3.2",
+    "simple-slider": "^1.0.1",
     "smooth-scrollbar": "^8.8.4",
     "typewriter-effect": "^2.21.0",
     "webpack": "^5.88.0",

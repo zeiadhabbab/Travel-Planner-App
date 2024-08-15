@@ -2,26 +2,12 @@
 import Typewriter from 'typewriter-effect/dist/core';
 
 import { drwaResultUI, showLoader } from './draw.js';
-import { getStorageData, addStorageData } from './dataSet.js';
+import { setTempData } from './dataSet.js';
 
 /* handle From  */
+
 const form = document.getElementById('plan-from');
-const saveBtn =  document.getElementById('plan-from');
 form.addEventListener('submit', handleSubmit);
-const rootElement = document.querySelector('#search-result-data');
-
-let tempCard = null;
-
-rootElement.addEventListener('click',function(event){
-    let targetElement = event.target
-    let selector = 'a';
-    //if(targetElement.match(selector)) {
-        if(tempCard != null){
-            addStorageData(tempCard);
-        }
-    //}
-},true);
-
 
 async function handleSubmit(event) {
     showLoader();
@@ -48,7 +34,7 @@ async function handleSubmit(event) {
             cardData.dateStart = dateStart;
 
             cardData.daysLeft = getCountdown(dateStart);
-            cardData.duration = subtractDates(dateStart, dateEnd);
+            cardData.duration = duration(dateStart, dateEnd);
 
             if(cardData.daysLeft > 1 ){
                 cardData.daysLeftTxt = cardData.daysLeft + ' days';
@@ -99,7 +85,9 @@ async function handleSubmit(event) {
                             }
 
                             drwaResultUI(cardData);
-                            tempCard = cardData;
+
+                            setTempData(cardData);
+
                             console.log(cardData);
                         }
                     });
@@ -137,24 +125,21 @@ async function getData(url, body){
     }
 }
 
-export const getCountdown = (startDate) => {
-
-    let todayDate = new Date();
-    const day = String(todayDate.getDate()).padStart(2, '0');
-    const month = String(todayDate.getMonth() + 1).padStart(2, '0');
-    const year = todayDate.getFullYear();
-    todayDate = year + '-' + month + '-' + day;
-
-    const daysLeft = subtractDates(todayDate, startDate);
+function getCountdown(startDate) {
+    const today = new Date();
+    // Format today's date as YYYY-MM-DD
+    const formattedToday = today.toISOString().split('T')[0];
+    const daysLeft = duration(formattedToday, startDate);
     return daysLeft;
 }
 
-export const subtractDates = (dateOne, dateTwo) => {
-    const d1 = Date.parse(dateOne);
-    const d2 = Date.parse(dateTwo);
+function duration(dateOne, dateTwo) {
+    const timestamp1 = Date.parse(dateOne);
+    const timestamp2 = Date.parse(dateTwo);
 
-    const difference = d2 - d1;
+    const millisecondsPerDay = 86400000; // Number of milliseconds in a day
+    const differenceInMilliseconds = Math.abs(timestamp1 - timestamp2);
+    const differenceInDays = Math.ceil(differenceInMilliseconds / millisecondsPerDay);
 
-    const result = Math.ceil(difference / 86400000);
-    return result;
+    return differenceInDays;
 }
