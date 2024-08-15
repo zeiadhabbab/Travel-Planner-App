@@ -4,7 +4,7 @@ const { pixiData } = require("./dummy");
 
 const path = require('path');
 const express = require('express');
-const port = 8888;
+const port = 8000;
 const cors = require("cors");
 const app = express();
 const dotenv = require('dotenv');
@@ -17,9 +17,6 @@ dotenv.config();
 
 isDummy = false;
 
-app.get('/', function (req, res) {
-    res.sendFile('dist/index.html')
-});
 
 // Variables for url and api key
 

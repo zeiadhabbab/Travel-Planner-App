@@ -1,5 +1,5 @@
 import { getSlider } from 'simple-slider';
-import { getTempData, setTempData, addStorageData, getStorageData } from './dataSet.js';
+import { getTempData, setTempData, addStorageData, getStorageData, removeStorageData } from './dataSet.js';
 
 
 export function drwaResultUI(cardData){
@@ -318,7 +318,11 @@ export function drawSavedUI(){
             <div class="card">
                 <div class="card-title">
                     <div>${cardData.destination}, ${cardData.countryName}</div>
-                    
+                     <div>
+                        <a href="#" id="remove-btn-${cardData.geonameId}" class="remove-btn save-btn" title="Remove the Trip" data-id="${cardData.geonameId}">
+                            <i class="far fa fa-trash"></i> Remove
+                        </a>
+                    </div>
                 </div>
                 <div class="card-img data-simple-slider-${cardData.geonameId}" id="saved-simple-slider-${cardData.geonameId}" style="height: 150px;">
                     ${images}
@@ -362,6 +366,19 @@ export function drawSavedUI(){
                 delay:2.5
             });
         });
+
+   
+
+        const trips = document.querySelectorAll(".remove-btn");
+
+        for (let i = 0; i < trips.length; i++) {
+            trips[i].addEventListener("click", function() {
+                
+                removeStorageData(trips[i].dataset.id);
+                drawSavedUI();
+            });
+        }
+
     }else{
         savedView.innerHTML = `<div class="no-data">No Saved Data Yet!</div>`;
     }

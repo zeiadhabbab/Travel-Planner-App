@@ -25,6 +25,31 @@ export function addStorageData(item) {
     localStorage.setItem('planTripData', JSON.stringify(planTripData));
 }
 
+export function removeStorageData(geonameId) {
+    let planTripData = JSON.parse(localStorage.getItem("planTripData"));
+    
+    if (planTripData != null) {
+        // Log the data before removing the item
+        console.log("Before removal:", planTripData);
+
+        // Filter out the item with the given geonameId
+        planTripData = planTripData.filter(item => item.geonameId != geonameId);
+
+        // Log the data after removing the item
+        console.log("After removal:", planTripData);
+
+        // Save the updated array back to localStorage
+        localStorage.setItem('planTripData', JSON.stringify(planTripData));
+
+        // Verify the data in localStorage after saving
+        const updatedData = JSON.parse(localStorage.getItem("planTripData"));
+        console.log("Updated localStorage data:", updatedData);
+    } else {
+        console.log("No data found in localStorage.");
+    }
+}
+
+
 export function setTempData(data){
     tempCard = data;
 }

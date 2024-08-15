@@ -107,7 +107,7 @@ async function getData(url, body){
 
     try {
         // Function to send data to the server
-        const response = await fetch(`http://localhost:8888/${url}`, {
+        const response = await fetch(`http://localhost:8000/${url}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -136,7 +136,7 @@ function getCountdown(startDate) {
 function duration(dateOne, dateTwo) {
     const timestamp1 = Date.parse(dateOne);
     const timestamp2 = Date.parse(dateTwo);
-    
+
     const millisecondsPerDay = 86400000; // Number of milliseconds in a day
     const differenceInMilliseconds = Math.abs(timestamp1 - timestamp2);
     const differenceInDays = Math.ceil(differenceInMilliseconds / millisecondsPerDay);
