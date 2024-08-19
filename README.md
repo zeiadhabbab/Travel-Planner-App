@@ -29,7 +29,7 @@ npm install
 ```
 if you face problem use this:
 ```
-np install --legacy-peer-deps
+npm install --legacy-peer-deps
 ```
 
 To run Server side on dev environment:
