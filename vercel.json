@@ -9,7 +9,7 @@
         }
       },
       {
-        "src": "src/client/index.js",
+        "src": "src/client/(.*)",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "dist",
