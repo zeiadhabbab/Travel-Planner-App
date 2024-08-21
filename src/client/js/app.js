@@ -22,7 +22,7 @@ async function handleSubmit(event) {
     let  body = {dateEnd:dateEnd,dateStart:dateStart,destination:destination};
     let errorMsg = '';
 
-    getData('getFromGeonamesAPI', body).then((geoData)=>{
+    getData('api/getFromGeonamesAPI', body).then((geoData)=>{
         
         if(geoData && geoData.totalResultsCount && geoData.totalResultsCount > 0){
             let geonameData = geoData.geonames[0];
@@ -60,7 +60,7 @@ async function handleSubmit(event) {
            
             body = { lat: geonameData.lat, lng: geonameData.lng };
 
-            getData('getFromWeatherbitAPI', body).then((wetherData)=>{
+            getData('api/getFromWeatherbitAPI', body).then((wetherData)=>{
                 var BreakException = {};
                 if(wetherData && wetherData.data && wetherData.data.length > 0 ){
                     wetherData.data.forEach(element => {
@@ -68,7 +68,7 @@ async function handleSubmit(event) {
                     });
 
                     let  body = {dateEnd:dateEnd,dateStart:dateStart,destination:destination};
-                    getData('getFromPixabayAPI', body).then((imagesList)=>{
+                    getData('api/getFromPixabayAPI', body).then((imagesList)=>{
                         let count = 0;
                         if(imagesList && imagesList.total && imagesList.total > 0 ){
                             try {

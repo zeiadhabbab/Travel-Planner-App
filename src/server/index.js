@@ -37,12 +37,12 @@ const pixabayKey = process.env.PIXABAY_KEY;
 const countriesAPI = process.env.COUNTRIES_API;
 const countriesKey = process.env.COUNTRIES_KEY;
 
-app.get('/', function (req, res) {
+app.get('/api/', function (req, res) {
     res.sendFile('dist/index.html')
 });
 
 // POST Route for getFromGeonamesAPI
-app.post("/getFromGeonamesAPI", async (req, res) => {
+app.post("/api/getFromGeonamesAPI", async (req, res) => {
     console.log(req.body.destination);
    
     const requestUrl = geonamesURL + req.body.destination + geonamesKey;
@@ -76,7 +76,7 @@ app.post("/getFromGeonamesAPI", async (req, res) => {
 
 
 // POST Route for getFromGeonamesAPI
-app.post("/getFromPixabayAPI", async (req, res) => {
+app.post("/api/getFromPixabayAPI", async (req, res) => {
 
     let dest = req.body.destination.replaceAll(' ', '+');
     const requestUrl = pixabayURL + dest + pixabayKey;
@@ -105,7 +105,7 @@ app.post("/getFromPixabayAPI", async (req, res) => {
 
 
 // POST Route for getFromGeonamesAPI
-app.post("/getFromWeatherbitAPI", async (req, res) => {
+app.post("/api/getFromWeatherbitAPI", async (req, res) => {
     const lat = req.body.lat;
     const lng = req.body.lng;
     const requestUrl = weatherbitURL + `?&lat=${lat}&lon=${lng}` + weatherbitKey;
@@ -133,7 +133,7 @@ app.post("/getFromWeatherbitAPI", async (req, res) => {
 
 
 // POST Route for getFromCountryAPI
-app.post("/getFromCountryAPI", async (req, res) => {
+app.post("/api/getFromCountryAPI", async (req, res) => {
     const country = res.countData.country;
     const requestUrl = countriesAPI + country + countriesKey;
    
