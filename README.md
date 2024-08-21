@@ -32,6 +32,12 @@ if you face problem use this:
 npm install --legacy-peer-deps
 ```
 
+### Node & npm
+```
+node v20.11.0
+npm 10.2.4
+```
+
 To run Server side on dev environment:
 ```
 npm run start 
