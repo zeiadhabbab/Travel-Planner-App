@@ -12,7 +12,8 @@
         "src": "src/client/index.js",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "dist"
+          "distDir": "dist",
+          "includeFiles": ["package.json"]
         }
       }
     ],
