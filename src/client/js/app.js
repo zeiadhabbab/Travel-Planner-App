@@ -107,7 +107,7 @@ async function getData(url, body){
 
     try {
         // Function to send data to the server
-        const response = await fetch(`http://localhost:8000/${url}`, {
+        const response = await fetch(`https://travel-api-server-14ad9u9a4-zeyad-habbabs-projects.vercel.app/${url}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
