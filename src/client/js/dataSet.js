@@ -60,6 +60,15 @@ export function getTempData(){
 }
 
 
+export function getCountdownVal(startDate) {
+    const today = new Date();
+    // Format today's date as YYYY-MM-DD
+    const formattedToday = today.toISOString().split('T')[0];
+    const daysLeft = duration(formattedToday, startDate);
+    return daysLeft;
+}
+
+
 /*
 
 Allow user to add multiple destinations on the same trip.

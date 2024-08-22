@@ -125,7 +125,7 @@ async function getData(url, body){
     }
 }
 
-function getCountdown(startDate) {
+export function getCountdown(startDate) {
     const today = new Date();
     // Format today's date as YYYY-MM-DD
     const formattedToday = today.toISOString().split('T')[0];
