@@ -107,7 +107,7 @@ async function getData(url, body){
 
     try {
         // Function to send data to the server
-        const response = await fetch(`https://travel-planner-app-kappa.vercel.app/${url}`, {
+        const response = await fetch(`http://localhost:8000/${url}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
