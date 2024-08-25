@@ -53,6 +53,18 @@ you can now check this URL to access the project
 http://localhost:3000/
 ```
 
+you can run jest for unit test using:
+```
+npm run test
+```
+```
+Expected result
+Test Suites: 3 passed, 3 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+```
+
+
 ## Setting up the API
 
 You need to creat account for  https://www.weatherbit.io , https://geonames.org, https://pixabay.com
