@@ -64,8 +64,18 @@ export function getCountdownVal(startDate) {
     const today = new Date();
     // Format today's date as YYYY-MM-DD
     const formattedToday = today.toISOString().split('T')[0];
-    const daysLeft = duration(formattedToday, startDate);
+    const daysLeft = durationVal(formattedToday, startDate);
     return daysLeft;
+}
+
+export function durationVal(dateOne, dateTwo) {
+    const timestamp1 = Date.parse(dateOne);
+    const timestamp2 = Date.parse(dateTwo);
+
+    const millisecondsPerDay = 86400000; // Number of milliseconds in a day
+    const differenceInMilliseconds = Math.abs(timestamp1 - timestamp2);
+    const differenceInDays = Math.ceil(differenceInMilliseconds / millisecondsPerDay);
+    return differenceInDays;
 }
 
 

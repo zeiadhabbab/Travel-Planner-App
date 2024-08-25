@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(express.static('dist'))
 dotenv.config();
 
-isDummy = false;
+let isDummy = false;
 
 
 // Variables for url and api key
@@ -162,3 +162,4 @@ app.listen(port, function () {
 });
 
 
+module.exports = app;

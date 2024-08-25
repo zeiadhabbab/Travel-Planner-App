@@ -343,7 +343,7 @@ const wetherData = {
     "timezone": "Europe/London"
 }
 
-pixiData = {
+const pixiData = {
     "total": 2893,
     "totalHits": 500,
     "hits": [

@@ -59,7 +59,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: $fontfamily;
+    & {
+        font-family: $fontfamily;
+    }
 }
 
 main {

@@ -2,6 +2,7 @@
     border: 1px solid #cecece;
     border-radius: 3px;
     padding: 40px;
+    position: relative;
     
     
     input {
@@ -14,9 +15,6 @@
     .hidden{
         display: none;
     }
-
-    position: relative;
-
 
     .loader {
         position: absolute;
